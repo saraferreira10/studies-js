@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="number_is">Seu número é </h1>
+    <p id="number_square">Raiz quadrada: </p>
+    <p id="is_integer">É inteiro: </p>
+    <p id="is_nan">É NaN: </p>
+    <p id="rounded_down">Arredondado para baixo: </p>
+    <p id="rounded_up">Arredondado para cima: </p>
+    <p id="two_places">Com duas casas decimais: </p>
+
+    <script>
+        window.onload = () => {
+            let num = Number(prompt("Insira um número"));
+            console.log(typeof num);
+            document.getElementById("number_is").innerText += " " + num;
+            document.getElementById("number_square").innerText += " " + num ** (1 / 2); //Math.sqrt(num)
+            document.getElementById("is_integer").innerHTML += Number.isInteger(num);
+            document.getElementById("is_nan").innerHTML += Number.isNaN(num);
+            document.getElementById("rounded_down").innerHTML += Math.floor(num);
+            document.getElementById("rounded_up").innerHTML += Math.ceil(num);
+            document.getElementById("two_places").innerHTML += num.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
