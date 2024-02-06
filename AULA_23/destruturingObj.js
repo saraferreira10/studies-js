@@ -10,5 +10,8 @@ const pessoa = {
 }
 
 //valor padrão
-const { nome = '', linguagens: { java: lang1, javascript }} = pessoa;
+const { nome = '', linguagens: { java: lang1, javascript } } = pessoa;
 console.log(nome, lang1, javascript);
+
+const { sobrenome } = pessoa;
+console.log(sobrenome);

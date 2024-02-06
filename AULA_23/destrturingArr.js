@@ -8,6 +8,7 @@ const letrasArr = [b, c, a];
 [a, b, c] = letrasArr;
 
 console.log(a, b, c);
+console.log(letrasArr)
 
 const numerosArr = [1, 2, 3, 4, 5, 6, 7];
 const [primNum, , terNun, ...restoArr] = numerosArr;
